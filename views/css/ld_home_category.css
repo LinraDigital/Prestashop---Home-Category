@@ -1,0 +1,210 @@
+/* ld_home_category - styles de base, à affiner côté client */
+
+.ld-home-categories h2 {
+  color: #95c13d;
+  font-style: italic;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .ld-home-categories h2 {
+    font-size: 1.5rem;
+  }
+}
+.ld-home-categories h2 .big {
+  color: black;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  display: block;
+}
+@media (min-width: 576px) {
+  .ld-home-categories h2 .big {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .ld-home-categories h2 .big {
+    font-size: 4rem;
+  }
+}
+.ld-home-categories h2 .big::before {
+    background: rgb(149, 193, 61);
+    content: "";
+    height: 5px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -45px;
+    width: 25px;
+    z-index: -1;
+}
+@media (min-width: 576px) {
+  .ld-home-categories h2 .big::before {
+    margin-top: 30px;
+    margin-left: -85px;
+    width: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .ld-home-categories h2 .big::before {
+    width: 150px;
+    margin-left: -175px;
+  }
+}
+.ld-home-categories h2 .big::after {
+    background: rgb(149, 193, 61);
+    content: "";
+    height: 5px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 25px;
+    z-index: -1;
+}
+@media (min-width: 576px) {
+  .ld-home-categories h2 .big::after {
+    margin-top: 30px;
+    width: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .ld-home-categories h2 .big::after {
+    width: 150px;
+  }
+}
+.ld-home-categories .container > .desc {
+    text-align: center;
+    margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+    .ld-home-categories .container > .desc {
+        text-align: center;
+        width: 75%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+}
+.ld-home-categories h3 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .ld-home-categories h3 {
+        width: 90%;
+        font-size: 1.8rem;
+        text-align: left;
+    }
+}
+@media (min-width: 992px) {
+    .ld-home-categories h3 {
+        width: 70%;
+    }
+}
+.ld-home-categories .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.ld-home-categories .row > [class*="col-"] {
+    display: flex;
+}
+.ld-home-categories .bloc {
+    background: rgb(18, 18, 18);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 35px;
+    padding: 30px;
+    padding-top: 125px;
+    transition: all .5s;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 575px) {
+    .ld-home-categories .col-12 {
+        margin-top: 25px;
+    }
+    .ld-home-categories .col-12:first-child {
+        margin-top: 0;
+    }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+    .ld-home-categories .col-sm-6:nth-child(n+3) .bloc {
+        margin-top: 25px;
+    }
+}
+.ld-home-categories .bloc:hover {
+    border-color: #95c13d;
+    rotate: 5deg;
+    transform: scale(1.05);
+}
+.ld-home-categories .bloc::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 25%,
+        rgba(0, 0, 0, 0.35) 75%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+    pointer-events: none; /* laisse passer le clic sur le lien */
+}
+/* .ld-home-categories .bloc img {
+    width: 90%;
+    border-bottom: 1px solid #f7f7f7;
+    padding-bottom: 25px;
+} */
+.ld-home-categories .bloc h4 {
+    color: white;
+    font-family: 'BebasNeue-Regular';
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+.ld-home-categories .bloc .desc {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+    color: #95c13d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+}
+.ld-home-categories .bloc .lien {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 15px;
+    transition: background-color .2s ease, color .2s ease;
+    position: relative;
+    z-index: 2;
+}
+.ld-home-categories .bloc .lien .liens-arrow {
+    transition: transform .2s ease;
+    margin-left: 5px;
+}
+.ld-home-categories .bloc:hover .lien .liens-arrow {
+    transform: translateX(10px);
+}
